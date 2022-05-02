@@ -28,8 +28,8 @@ TxtField({
           fillColor: Colors.white,
           contentPadding:
               const EdgeInsets.symmetric(vertical: 5.0, horizontal: 5.0),
-          enabledBorder: OutlineInputBorder(
-              borderSide: new BorderSide(color: Colors.grey, width: 0.4)),
+          enabledBorder: const OutlineInputBorder(
+              borderSide:  BorderSide(color: Colors.grey, width: 0.4)),
           hintText: hint,
         ),
       ),

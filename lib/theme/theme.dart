@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
-  visualDensity:const VisualDensity(vertical: 0.5, horizontal: 0.5),
+  visualDensity: const VisualDensity(vertical: 0.5, horizontal: 0.5),
   primaryColor: Colors.black,
   // primaryColorBrightness: Brightness.light,
   primaryColorLight: Colors.blueAccent,
@@ -14,13 +14,13 @@ ThemeData lightTheme = ThemeData(
 
   bottomAppBarColor: Colors.white,
   cardColor: const Color.fromRGBO(127, 196, 253, 1),
-  dividerColor:const Color(0x1f6D42CE),
-  focusColor:const Color(0x1aF5E0C3),
+  dividerColor: const Color(0x1f6D42CE),
+  focusColor: const Color(0x1aF5E0C3),
   colorScheme: ColorScheme.fromSwatch()
-      .copyWith(secondary:const Color.fromRGBO(255, 149, 0, 1)),
-  textTheme:const TextTheme().copyWith(
+      .copyWith(secondary: const Color.fromRGBO(255, 149, 0, 1)),
+  textTheme: const TextTheme().copyWith(
     headline1: const TextStyle(color: Colors.black),
-    headline2:  const TextStyle(color: Colors.black),
+    headline2: const TextStyle(color: Colors.black),
     headline3: const TextStyle(color: Colors.black),
     headline4: const TextStyle(color: Colors.black),
     headline5: const TextStyle(color: Colors.black),
@@ -33,16 +33,20 @@ ThemeData lightTheme = ThemeData(
     button: const TextStyle(color: Colors.black),
     caption: const TextStyle(color: Colors.black),
   ),
-  fontFamily:  GoogleFonts.trykker().fontFamily,
-  buttonTheme:const ButtonThemeData().copyWith(
+  fontFamily: GoogleFonts.trykker().fontFamily,
+  buttonTheme: const ButtonThemeData().copyWith(
     buttonColor: constant,
     textTheme: ButtonTextTheme.primary,
   ),
 );
+IconThemeData iconThemeData = const IconThemeData(
+  color: black,
+  size: 30
+);
 
 const Color constant = Color(0xFFFFCC747F);
 const Color black = Colors.black;
- Color lightgrey = Colors.grey.shade200.withOpacity(0.7);
+Color lightgrey = Colors.grey.shade200.withOpacity(0.7);
 const Color grey = Colors.grey;
 const Color white = Colors.white;
 const Color gradientPurple = Color.fromRGBO(83, 57, 214, 1);
@@ -59,7 +63,6 @@ const Color redColor = Color.fromRGBO(255, 85, 10, 1);
 const Color yellowColor = Color.fromRGBO(255, 245, 0, 1);
 const Color iceBlue = Color.fromRGBO(241, 249, 255, 1);
 const Color cyanColor = Color.fromRGBO(3, 218, 198, 1);
-
 
 class _ThemeColor {
   final Color primaryColor;

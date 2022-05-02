@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:run_down/core/constant/textwidget.dart';
+import 'package:run_down/core/constantwidgets/textwidget.dart';
 import 'package:run_down/theme/theme.dart';
 
 class LandingWidget extends StatelessWidget {

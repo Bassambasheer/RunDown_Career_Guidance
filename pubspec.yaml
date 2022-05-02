@@ -53,6 +53,10 @@ flutter:
     - assets/landing2.png
     - assets/landing3.jpg
     - assets/landing4.jpg
+    - assets/home.jpg
+    - assets/home1.png
+    - assets/home2.png
+    - assets/premium.webp
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see

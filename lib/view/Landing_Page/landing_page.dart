@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:run_down/core/constant/buttonwidget.dart';
-import 'package:run_down/core/constant/textwidget.dart';
+import 'package:run_down/core/constantwidgets/buttonwidget.dart';
+import 'package:run_down/core/constantwidgets/textwidget.dart';
 import 'package:run_down/theme/theme.dart';
-import 'package:run_down/view/Home_Page/home_page.dart';
 import 'package:run_down/view/Landing_Page/widgets/landing_widget.dart';
+import 'package:run_down/view/Log_In_page/login_in_page.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({Key? key}) : super(key: key);
@@ -43,7 +43,7 @@ class LandingPage extends StatelessWidget {
               txt: "Get Started",
               ontap: (){
                  Navigator.of(context)
-            .pushReplacement(MaterialPageRoute(builder: (ctx) =>const HomePage()));
+            .pushReplacement(MaterialPageRoute(builder: (ctx) => LogInScreen()));
               },
             ),
             asset: "assets/landing4.jpg",

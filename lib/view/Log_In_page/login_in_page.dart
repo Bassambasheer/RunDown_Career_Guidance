@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:run_down/core/constant/buttonwidget.dart';
-import 'package:run_down/core/constant/textwidget.dart';
-import 'package:run_down/core/constant/txtbox.dart';
+import 'package:run_down/core/constantwidgets/buttonwidget.dart';
+import 'package:run_down/core/constantwidgets/textwidget.dart';
+import 'package:run_down/core/constantwidgets/txtbox.dart';
 import 'package:run_down/theme/theme.dart';
+import 'package:run_down/view/Home_Page/home_page.dart';
 import 'package:run_down/view/Sign_up_page/user_sign_up_page.dart';
 
 class LogInScreen extends StatelessWidget {
@@ -48,7 +49,12 @@ class LogInScreen extends StatelessWidget {
                       hint: "Password",
                       pass: true,
                     ),
-                    ButtonWidget(txt: "Sign In", ontap: () {}),
+                    ButtonWidget(
+                        txt: "Sign In",
+                        ontap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (ctx) => HomeScreen()));
+                        }),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
