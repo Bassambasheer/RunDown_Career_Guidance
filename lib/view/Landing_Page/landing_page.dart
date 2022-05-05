@@ -16,7 +16,7 @@ class LandingPage extends StatelessWidget {
             widget: TextWidget(
               txt: "Swipe ->",
               clr: constant,
-              size: 25,
+              size: 22,
             ),
             asset: "assets/landing1.png",
             centerTxt: "Take a aptitude test developed by our experts team"),
@@ -24,7 +24,7 @@ class LandingPage extends StatelessWidget {
             widget: TextWidget(
               txt: "Swipe ->",
               clr: constant,
-              size: 25,
+              size: 22,
             ),
             asset: "assets/landing2.png",
             centerTxt:
@@ -33,7 +33,7 @@ class LandingPage extends StatelessWidget {
             widget: TextWidget(
               txt: "Swipe ->",
               clr: constant,
-              size: 25,
+              size: 22,
             ),
             asset: "assets/landing3.jpg",
             centerTxt:

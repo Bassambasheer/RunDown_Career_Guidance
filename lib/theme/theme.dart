@@ -11,7 +11,8 @@ ThemeData lightTheme = ThemeData(
   canvasColor: Colors.white70,
   // scaffoldBackgroundColor: Color.fromRGBO(240, 250, 245, 0.6),
   scaffoldBackgroundColor: Colors.white,
-
+  appBarTheme: const AppBarTheme(
+      iconTheme: IconThemeData(color: black, size: 30), backgroundColor: white),
   bottomAppBarColor: Colors.white,
   cardColor: const Color.fromRGBO(127, 196, 253, 1),
   dividerColor: const Color(0x1f6D42CE),
@@ -38,10 +39,6 @@ ThemeData lightTheme = ThemeData(
     buttonColor: constant,
     textTheme: ButtonTextTheme.primary,
   ),
-);
-IconThemeData iconThemeData = const IconThemeData(
-  color: black,
-  size: 30
 );
 
 const Color constant = Color(0xFFFFCC747F);

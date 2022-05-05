@@ -5,8 +5,9 @@ import 'package:run_down/core/constantwidgets/textwidget.dart';
 import 'package:run_down/core/constantwidgets/txtbox.dart';
 import 'package:run_down/theme/theme.dart';
 
-class UserSignUpScreen extends StatelessWidget {
-  UserSignUpScreen({Key? key}) : super(key: key); 
+class MentorSignUp extends StatelessWidget {
+  MentorSignUp({Key? key}) : super(key: key);
+
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController firstnameController = TextEditingController();
   final TextEditingController lastnameController = TextEditingController();
@@ -15,7 +16,7 @@ class UserSignUpScreen extends StatelessWidget {
   final TextEditingController confirmpassController = TextEditingController();
   final TextEditingController qualificationController = TextEditingController();
   final TextEditingController addressController = TextEditingController();
-  final TextEditingController aboutController = TextEditingController();
+  final TextEditingController linkController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -27,16 +28,16 @@ class UserSignUpScreen extends StatelessWidget {
             padding: const EdgeInsets.only(top: 20.0, bottom: 10),
             child: TextWidget(
               align: TextAlign.center,
-              txt: "RunDown",
+              txt: "Be a Mentor",
               size: 35,
               weight: FontWeight.bold,
-              clr: redColorDark,
+              clr: constant,
               fam: GoogleFonts.viga().fontFamily,
             ),
           ),
           const TextWidget(
             align: TextAlign.center,
-            txt: "Build your career with us",
+            txt: "Register Here to be  part of our team ",
             size: 20,
             weight: FontWeight.bold,
           ),
@@ -59,33 +60,30 @@ class UserSignUpScreen extends StatelessWidget {
             hint: "Phone",
             type: TextInputType.phone,
           ),
-            TxtField(
+          TxtField(
             controller: passwordController,
             pass: true,
             hint: "Password",
           ),
-            TxtField(
+          TxtField(
             controller: confirmpassController,
             pass: true,
             hint: "Confirm Password",
           ),
-            TxtField(
+          TxtField(
             controller: qualificationController,
             hint: "Qualification",
           ),
-           TxtField(
+          TxtField(
             controller: addressController,
             hint: "Address",
             lines: 5,
-          ), TxtField(
-            controller: aboutController,
-            hint: "Write about yourself",
-            lines: 5,
           ),
+          TxtField(controller: linkController, hint: "LinkedIn profile link"),
           Padding(
-            padding: const EdgeInsets.only(left: 25,right: 25,
-            top: 10,bottom: 10),
-            child: ButtonWidget(txt: "Register", ontap: (){}),
+            padding:
+                const EdgeInsets.only(left: 25, right: 25, top: 10, bottom: 10),
+            child: ButtonWidget(txt: "Register", ontap: () {}),
           )
         ],
       ),

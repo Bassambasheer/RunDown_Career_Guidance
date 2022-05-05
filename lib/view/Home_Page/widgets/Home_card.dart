@@ -21,38 +21,47 @@ class HomeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: grey.withOpacity(0.3),
-        borderRadius: BorderRadius.circular(25),
-      ),
-      width: size.width * 0.7,
-      height: size.width * 0.9,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Container(
-            width: size.width * 0.2,
-            height: size.width * 0.2,
-            decoration:
-                BoxDecoration(image: DecorationImage(image: AssetImage(asset))),
-          ),
-          TextWidget(
-            align: TextAlign.center,
-            txt: title,
-            size: 27,
-          ),
-          TextWidget(
-            align: TextAlign.center,
-            txt: content,
-            size: 20,
-          ),
-          ButtonWidget(
-              txt: "Explore",
-              ontap: () {
-                ontap;
-              })
-        ],
+    return Padding(
+      padding: const EdgeInsets.all(15),
+      child: Card(
+        color: white,
+        shadowColor: black,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+        // decoration: BoxDecoration(
+        //   color: grey.withOpacity(0.3),
+        //   borderRadius: BorderRadius.circular(25),
+        // ),
+        // width: size.width * 0.7,
+        // height: size.width * 0.9,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              width: size.width * 0.2,
+              height: size.width * 0.2,
+              decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage(asset))),
+            ),
+            const SizedBox(height: 15),
+            TextWidget(
+              align: TextAlign.center,
+              txt: title,
+              size: 27,
+            ),
+            const SizedBox(height: 15),
+            TextWidget(
+              align: TextAlign.center,
+              txt: content,
+              size: 20,
+            ),
+            const SizedBox(height: 15),
+            ButtonWidget(
+                txt: "Explore",
+                ontap: () {
+                  ontap();
+                })
+          ],
+        ),
       ),
     );
   }
