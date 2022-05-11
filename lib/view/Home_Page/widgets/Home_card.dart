@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:run_down/core/constantwidgets/buttonwidget.dart';
 import 'package:run_down/theme/theme.dart';
-
 import '../../../core/constantwidgets/textwidget.dart';
-
 class HomeCard extends StatelessWidget {
   const HomeCard({
     Key? key,
@@ -18,7 +16,6 @@ class HomeCard extends StatelessWidget {
   final String title;
   final String content;
   final Function ontap;
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -27,12 +24,6 @@ class HomeCard extends StatelessWidget {
         color: white,
         shadowColor: black,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
-        // decoration: BoxDecoration(
-        //   color: grey.withOpacity(0.3),
-        //   borderRadius: BorderRadius.circular(25),
-        // ),
-        // width: size.width * 0.7,
-        // height: size.width * 0.9,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [

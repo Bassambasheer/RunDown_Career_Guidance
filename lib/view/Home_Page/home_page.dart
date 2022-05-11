@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:run_down/theme/theme.dart';
+import 'package:run_down/view/Aptitude_pages/Instructions.dart';
 import 'package:run_down/view/Home_Page/widgets/Home_card.dart';
-import 'package:run_down/view/Message_page/message_page.dart';
+import 'package:run_down/view/Message_page/message_listing_page.dart';
 import 'package:run_down/view/Premium_page/premiuim_page.dart';
 import 'package:run_down/view/Profile_page/profile_page.dart';
 import 'package:run_down/view/Sign_up_page/mentor_sign_up_page.dart';
@@ -52,7 +53,10 @@ class HomeScreen extends StatelessWidget {
             title: "Find your career",
             content:
                 "Find your ideal course\n and career.Talk to our\n experts",
-            ontap: () {},
+            ontap: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (ctx) => const InstructionSet()));
+            },
           ),
           const SizedBox(
             height: 15,
@@ -78,8 +82,8 @@ class HomeScreen extends StatelessWidget {
             content:
                 "Buy premium\nmembership to avail\nmore features like video\ncall with mentors etc.",
             ontap: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (ctx) => PremiumScreen()));
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (ctx) => const PremiumScreen()));
             },
           )
         ]),

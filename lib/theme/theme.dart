@@ -41,7 +41,7 @@ ThemeData lightTheme = ThemeData(
   ),
 );
 
-const Color constant = Color(0xFFFFCC747F);
+const Color constant = Color.fromARGB(255, 204, 116, 127);
 const Color black = Colors.black;
 Color lightgrey = Colors.grey.shade200.withOpacity(0.7);
 const Color grey = Colors.grey;
@@ -60,6 +60,7 @@ const Color redColor = Color.fromRGBO(255, 85, 10, 1);
 const Color yellowColor = Color.fromRGBO(255, 245, 0, 1);
 const Color iceBlue = Color.fromRGBO(241, 249, 255, 1);
 const Color cyanColor = Color.fromRGBO(3, 218, 198, 1);
+const Color blue = Colors.blue;
 
 class _ThemeColor {
   final Color primaryColor;

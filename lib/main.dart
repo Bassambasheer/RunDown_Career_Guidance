@@ -17,10 +17,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       theme: lightTheme,
       home: AnimatedSplashScreen(
-          animationDuration: Duration(seconds: 3),
+          animationDuration: const Duration(seconds: 3),
           backgroundColor: white,
           splash: TextWidget(
               fam: GoogleFonts.bigShouldersDisplay().fontFamily,
@@ -28,7 +27,7 @@ class MyApp extends StatelessWidget {
               size: 35,
               clr: redColorDark,
               weight: FontWeight.bold),
-          nextScreen: const LandingPage()),
+          nextScreen:  HomeScreen()),
     );
   }
 }
