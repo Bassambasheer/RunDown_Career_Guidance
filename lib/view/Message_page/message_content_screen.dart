@@ -15,6 +15,24 @@ class MessageContentScreen extends StatelessWidget {
           size: 20,
         ),
       ),
+      body: Column(
+        children: [
+          Expanded(child: Container()),
+          TextField(
+            decoration: InputDecoration(
+                border: const OutlineInputBorder(),
+                suffixIcon: InkWell(
+                  onTap: () {},
+                  child: const Icon(
+                    Icons.send,
+                    size: 20,
+                  ),
+                ),
+                contentPadding: const EdgeInsets.all(12),
+                hintText: "Message"),
+          )
+        ],
+      ),
     );
   }
 }

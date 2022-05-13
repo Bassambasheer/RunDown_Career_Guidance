@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:run_down/theme/theme.dart';
 import 'package:run_down/view/Aptitude_pages/Instructions.dart';
+import 'package:run_down/view/Find_mentor_page/find_mentor_screen.dart';
+import 'package:run_down/view/Home_Page/widgets/App_bar.dart';
 import 'package:run_down/view/Home_Page/widgets/Home_card.dart';
-import 'package:run_down/view/Message_page/message_listing_page.dart';
 import 'package:run_down/view/Premium_page/premiuim_page.dart';
-import 'package:run_down/view/Profile_page/profile_page.dart';
-import 'package:run_down/view/Sign_up_page/mentor_sign_up_page.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,30 +12,8 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: white,
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (ctx) => const MessageScreen()));
-              },
-              icon: const Icon(Icons.mail)),
-          const SizedBox(width: 20),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (ctx) => const ProfileScreen()));
-            },
-            child: const CircleAvatar(
-              backgroundColor: black,
-              radius: 16,
-            ),
-          ),
-          const SizedBox(width: 10),
-        ],
-      ),
+      appBar: const PreferredSize(
+          preferredSize: Size(double.infinity, 50), child: HomeScreenAppBar()),
       body: Padding(
         padding: const EdgeInsets.all(15),
         child: ListView(shrinkWrap: true, children: [
@@ -68,8 +44,8 @@ class HomeScreen extends StatelessWidget {
             content:
                 "Find the mentors who\nare chosen for you,talk\nto them and find your\npath",
             ontap: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (ctx) => MentorSignUp()));
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (ctx) => const FindYourMentor()));
             },
           ),
           const SizedBox(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:run_down/core/constantwidgets/buttonwidget.dart';
 import 'package:run_down/core/constantwidgets/textwidget.dart';
 import 'package:run_down/theme/theme.dart';
+import 'package:run_down/view/Aptitude_pages/assessment_type_page.dart';
 import 'package:run_down/view/Aptitude_pages/widgets/Instruction_tile.dart';
 
 class InstructionSet extends StatelessWidget {
@@ -40,7 +41,12 @@ class InstructionSet extends StatelessWidget {
             title:
                 "This assessment contains 3 categories of question and each category includes 10 questions.",
           ),
-          ButtonWidget(txt: "Next", ontap: () {})
+          ButtonWidget(
+              txt: "Next",
+              ontap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (ctx) => const AssessmentScreen()));
+              })
         ],
       ),
     );
