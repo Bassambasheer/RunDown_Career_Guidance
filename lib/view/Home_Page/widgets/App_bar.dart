@@ -12,7 +12,6 @@ class HomeScreenAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: false,
-      backgroundColor: white,
       actions: [
         IconButton(
             onPressed: () {
@@ -23,8 +22,8 @@ class HomeScreenAppBar extends StatelessWidget {
         const SizedBox(width: 20),
         InkWell(
           onTap: () {
-            Navigator.of(context).push(
-                MaterialPageRoute(builder: (ctx) =>  ProfileScreen()));
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (ctx) => ProfileScreen()));
           },
           child: const CircleAvatar(
             backgroundColor: black,

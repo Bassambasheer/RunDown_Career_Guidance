@@ -5,7 +5,7 @@ import 'package:run_down/theme/theme.dart';
 
 class Otp extends StatelessWidget {
   const Otp({Key? key}) : super(key: key);
-
+  final bool resend = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,19 +18,17 @@ class Otp extends StatelessWidget {
                 const SizedBox(height: 10),
                 const TextWidget(txt: "OTP Verification"),
                 const TextWidget(txt: "We sent your code to +1 898 860 ***"),
-                buildTimer(),
+                buildTimer(resend),
                 OtpTextField(
+                  onSubmit: (value) {},
                   borderWidth: 4.0,
                   showFieldAsBox: true,
                   numberOfFields: 6,
                   borderColor: const Color(0xFF512DA8),
                 ),
-                // OtpForm(),
                 const SizedBox(height: 10),
                 GestureDetector(
-                  onTap: () {
-                    // OTP code resend
-                  },
+                  onTap: () {},
                   child: const Text(
                     "Resend OTP Code",
                     style: TextStyle(decoration: TextDecoration.underline),
@@ -44,7 +42,7 @@ class Otp extends StatelessWidget {
     );
   }
 
-  Row buildTimer() {
+  Row buildTimer(resend) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -56,6 +54,7 @@ class Otp extends StatelessWidget {
             "00:${value.toInt()}",
             style: const TextStyle(color: blue),
           ),
+          onEnd: () {},
         ),
       ],
     );

@@ -103,7 +103,7 @@ class LogInScreen extends StatelessWidget {
                       ),
                       TextButton(
                           onPressed: () {
-                             Navigator.of(context).push(MaterialPageRoute(
+                            Navigator.of(context).push(MaterialPageRoute(
                                 builder: (ctx) => PhoneNumber()));
                           },
                           child: const TextWidget(

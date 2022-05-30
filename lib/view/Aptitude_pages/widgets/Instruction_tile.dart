@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:run_down/core/constantwidgets/textwidget.dart';
@@ -25,7 +24,10 @@ class InstructionTile extends StatelessWidget {
           clr: constant,
           fam: GoogleFonts.caladea().fontFamily,
         ),
-        title: TextWidget(txt: title,size: 20,),
+        title: TextWidget(
+          txt: title,
+          size: 20,
+        ),
       ),
     );
   }

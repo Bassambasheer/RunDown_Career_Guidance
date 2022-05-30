@@ -29,10 +29,12 @@ class ProfileScreen extends StatelessWidget {
                       label: const TextWidget(
                         txt: "edit",
                         size: 18,
+                        clr: black,
                       ),
                       icon: const Icon(
                         Icons.edit,
                         size: 18,
+                        color: black,
                       ))
                   : TextButton.icon(
                       onPressed: () {
@@ -43,10 +45,12 @@ class ProfileScreen extends StatelessWidget {
                       label: const TextWidget(
                         txt: "save",
                         size: 18,
+                        clr: black,
                       ),
                       icon: const Icon(
                         Icons.save_as_outlined,
                         size: 18,
+                        color: black,
                       ))
             ],
           ),

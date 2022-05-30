@@ -9,7 +9,8 @@ class TxtField extends StatelessWidget {
       this.lines = 1,
       this.type,
       this.readonly = false,
-      this.validator, this.icon})
+      this.validator,
+      this.icon})
       : super(key: key);
   final String hint;
   final bool pass;
@@ -36,7 +37,7 @@ class TxtField extends StatelessWidget {
             label: Text(hint),
             filled: true,
             fillColor: Colors.white,
-            suffixIcon: icon ,
+            suffixIcon: icon,
             contentPadding:
                 const EdgeInsets.symmetric(vertical: 5.0, horizontal: 5.0),
             enabledBorder: const OutlineInputBorder(

@@ -28,12 +28,17 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   animated_splash_screen: ^1.2.0
+  build_runner: ^2.1.10
   cupertino_icons: ^1.0.2
+  dio: ^4.0.6
   flutter:
     sdk: flutter
   flutter_bloc: ^8.0.1
   flutter_otp_text_field: ^1.0.1
   google_fonts: ^2.3.2
+  json_annotation: ^4.5.0
+  json_serializable: ^6.2.0
+  shared_preferences: ^2.0.15
   smooth_page_indicator: ^1.0.0+2
 
 dev_dependencies:

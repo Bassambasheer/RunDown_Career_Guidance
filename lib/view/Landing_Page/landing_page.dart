@@ -4,6 +4,7 @@ import 'package:run_down/core/constantwidgets/textwidget.dart';
 import 'package:run_down/theme/theme.dart';
 import 'package:run_down/view/Landing_Page/widgets/landing_widget.dart';
 import 'package:run_down/view/Log_In_page/login_in_page.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class LandingPage extends StatelessWidget {
@@ -24,7 +25,8 @@ class LandingPage extends StatelessWidget {
                   size: 22,
                 ),
                 asset: "assets/landing1.png",
-                centerTxt: "Take a aptitude test developed by our experts team"),
+                centerTxt:
+                    "Take a aptitude test developed by our experts team"),
             const LandingWidget(
                 widget: TextWidget(
                   txt: "Swipe ->",
@@ -46,13 +48,16 @@ class LandingPage extends StatelessWidget {
             LandingWidget(
                 widget: ButtonWidget(
                   txt: "Get Started",
-                  ontap: () {
+                  ontap: () async {
+                    final prefs = await SharedPreferences.getInstance();
+                    prefs.setBool('newUser', false);
                     Navigator.of(context).pushReplacement(
                         MaterialPageRoute(builder: (ctx) => LogInScreen()));
                   },
                 ),
                 asset: "assets/landing4.jpg",
-                centerTxt: "Get premium and go on video call with your mentors"),
+                centerTxt:
+                    "Get premium and go on video call with your mentors"),
           ],
         ),
       ),
@@ -61,7 +66,10 @@ class LandingPage extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 40),
         alignment: Alignment.bottomCenter,
         height: 80,
-        child: SmoothPageIndicator(controller: controller, count: 4,),
+        child: SmoothPageIndicator(
+          controller: controller,
+          count: 4,
+        ),
       ),
     );
   }

@@ -3,7 +3,11 @@ import 'package:run_down/core/constantwidgets/textwidget.dart';
 import 'package:run_down/theme/theme.dart';
 
 class LandingWidget extends StatelessWidget {
-  const LandingWidget({Key? key, required this.asset, required this.centerTxt,required this.widget})
+  const LandingWidget(
+      {Key? key,
+      required this.asset,
+      required this.centerTxt,
+      required this.widget})
       : super(key: key);
 
   final String asset;
@@ -35,7 +39,7 @@ class LandingWidget extends StatelessWidget {
               align: TextAlign.center,
             ),
           ),
-         widget
+          widget
         ],
       ),
     );

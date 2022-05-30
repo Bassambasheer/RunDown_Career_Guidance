@@ -4,4 +4,3 @@ class ProfileState {
   final bool readonly;
   ProfileState({required this.readonly});
 }
-

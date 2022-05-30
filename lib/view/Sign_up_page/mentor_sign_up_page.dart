@@ -4,6 +4,7 @@ import 'package:run_down/core/constantwidgets/buttonwidget.dart';
 import 'package:run_down/core/constantwidgets/textwidget.dart';
 import 'package:run_down/core/constantwidgets/txtbox.dart';
 import 'package:run_down/theme/theme.dart';
+import 'package:run_down/view/Home_Page/mentor_home_page.dart';
 
 class MentorSignUp extends StatelessWidget {
   MentorSignUp({Key? key}) : super(key: key);
@@ -147,7 +148,8 @@ class MentorSignUp extends StatelessWidget {
                   txt: "Register",
                   ontap: () {
                     if (_formKey.currentState!.validate()) {
-                      return null;
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (ctx) => const MentorHomeScreen()));
                     }
                   }),
             )

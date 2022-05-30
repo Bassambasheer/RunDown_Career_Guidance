@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:run_down/core/constantwidgets/textwidget.dart';
 import 'package:run_down/theme/theme.dart';
@@ -6,7 +5,8 @@ import 'package:run_down/theme/theme.dart';
 class ButtonWidget extends StatelessWidget {
   const ButtonWidget({
     Key? key,
-    required this.txt,required this.ontap,
+    required this.txt,
+    required this.ontap,
   }) : super(key: key);
   final String txt;
   final Function ontap;
@@ -24,7 +24,6 @@ class ButtonWidget extends StatelessWidget {
         txt: txt,
         clr: white,
         size: 22,
-  
       ),
     );
   }
